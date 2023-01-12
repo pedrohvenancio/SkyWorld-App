@@ -6,13 +6,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import Feed from './Feed';
-import Profile from './Profile';
 import Community from './Community';
 import Followers from './Followers';
 import Gallery from './Gallery';
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
 const HomeNavigator = () => {
 
     return (
@@ -24,12 +24,13 @@ const HomeNavigator = () => {
     )
 }
 
-const ProfileNavigator = () => {
-    <Stack.Navigator>
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Gallery" component={Gallery} />
-        <Stack.Screen name="Followers" component={Followers} />
-    </Stack.Navigator>
+const Profile = () => {
+    return (
+    <Tab.Navigator>
+        <Tab.Screen name="Gallery" component={Gallery} />
+        <Tab.Screen name="Followers" component={Followers} />
+    </Tab.Navigator>
+    )
 }
 
 function Home() {
@@ -37,7 +38,6 @@ function Home() {
     return (
         <NavigationContainer independent={true}>
             <HomeNavigator />
-            <ProfileNavigator />
         </NavigationContainer>
     );
 }

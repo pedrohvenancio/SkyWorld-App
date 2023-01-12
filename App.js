@@ -19,12 +19,12 @@ const AppNavigator = () => {
   
   return (
     <Stack.Navigator>
-      <Stack.Screen name="LoginInUp" component={LoginInUp} />
-      <Stack.Screen name="LoginIn" component={LoginIn} />
-      <Stack.Screen name="LoginUp" component={LoginUp} />
-      <Stack.Screen name="Welcome1" component={Welcome1} />
-      <Stack.Screen name="Welcome2" component={Welcome2} />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="LoginInUp" component={LoginInUp} options={{ headerShown: false }}/>
+      <Stack.Screen name="LoginIn" component={LoginIn} options={{ headerShown: false }}/>
+      <Stack.Screen name="LoginUp" component={LoginUp} options={{ headerShown: false }}/>
+      <Stack.Screen name="Welcome1" component={Welcome1} options={{ headerShown: false }}/>
+      <Stack.Screen name="Welcome2" component={Welcome2} options={{ headerShown: false }}/>
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
       <Stack.Screen name="Feed" component={Feed} />
       <Stack.Screen name="Community" component={Community} />
       <Stack.Screen name="Profile" component={Profile} />
